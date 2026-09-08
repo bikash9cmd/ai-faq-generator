@@ -1,0 +1,520 @@
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   MAIN APP
+   ========================================================= */
+
+.app {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px 25px 70px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+h1 {
+  text-align: center;
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin: 12px 0 40px;
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   GENERATOR FORM
+   ========================================================= */
+
+.form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+label:first-child {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #1f2937;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+
+/* =========================================================
+   GENERATE BUTTON
+   ========================================================= */
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.error {
+  margin-top: 15px;
+  padding: 12px 13px;
+  border-radius: 8px;
+
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   GENERATED RESULTS
+   ========================================================= */
+
+.results {
+  margin-top: 45px;
+}
+
+.results h2 {
+  margin-bottom: 18px;
+  color: #111827;
+  font-size: 24px;
+}
+
+
+/* =========================================================
+   FAQ CARD
+   ========================================================= */
+
+.faq-card {
+  background: #ffffff;
+  margin-top: 16px;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.faq-card h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.faq-card p {
+  margin: 12px 0 0;
+  line-height: 1.7;
+  color: #4b5563;
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   REGENERATE BUTTON
+   ========================================================= */
+
+.regenerate-button {
+  width: auto;
+  margin-top: 18px;
+  padding: 9px 15px;
+
+  border-radius: 7px;
+  background: #4b5563;
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: none;
+}
+
+.regenerate-button:hover:not(:disabled) {
+  background: #374151;
+  transform: none;
+  box-shadow: none;
+}
+
+.regenerate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FAQ HISTORY
+   ========================================================= */
+
+.history {
+  margin-top: 50px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.history-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #111827;
+}
+
+.history-header button {
+  width: auto;
+  margin: 0;
+  padding: 9px 16px;
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   HISTORY CARD
+   ========================================================= */
+
+.history-card {
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.history-card h3 {
+  margin: 0 0 13px;
+  color: #111827;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.history-card p {
+  margin: 6px 0;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.history-card small {
+  display: block;
+  margin-top: 12px;
+  color: #6b7280;
+}
+
+
+/* =========================================================
+   VIEW FAQ DETAILS
+   ========================================================= */
+
+.history-card details {
+  margin-top: 17px;
+  padding-top: 13px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.history-card summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 14px;
+}
+
+.history-card summary:hover {
+  color: #1d4ed8;
+}
+
+
+/* =========================================================
+   HISTORY FAQ
+   ========================================================= */
+
+.history-faq {
+  margin-top: 15px;
+  padding: 14px;
+
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.history-faq strong {
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+.history-faq p {
+  margin-top: 8px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+
+/* =========================================================
+   LOADING UX
+   ========================================================= */
+
+/* Makes disabled buttons visually obvious */
+
+button:disabled {
+  position: relative;
+}
+
+/* Loading text stays centered */
+
+button:disabled {
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 30px 15px 50px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .form {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .faq-card {
+    padding: 18px;
+  }
+
+  .history-header {
+    align-items: center;
+  }
+
+  .history-header h2 {
+    font-size: 21px;
+  }
+
+  .history-header button {
+    padding: 8px 12px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 14px;
+  }
+}
+ 
+
+/* =========================================================
+   EXPORT FAQs
+   ========================================================= */
+
+.export-section {
+  margin-top: 35px;
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.export-section h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 21px;
+}
+
+.export-description {
+  margin: 8px 0 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.export-button {
+  width: auto;
+
+  margin-top: 0;
+
+  padding: 10px 16px;
+
+  border-radius: 8px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.export-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PRINT / PDF
+   ========================================================= */
+
+@media print {
+
+  body {
+    background: white;
+  }
+
+  .app {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .form,
+  .history,
+  .export-section,
+  .regenerate-button {
+    display: none !important;
+  }
+
+  .results {
+    margin-top: 0;
+  }
+
+  .faq-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+
+    page-break-inside: avoid;
+  }
+
+  .results h2 {
+    margin-top: 0;
+  }
+
+}
