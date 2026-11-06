@@ -1,0 +1,4 @@
+# Extra packages for running AI_FAQ_Generator_Prototype.ipynb
+-r requirements.txt
+jupyterlab==4.6.3
+ipykernel==7.3.0
