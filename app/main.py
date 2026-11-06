@@ -259,13 +259,3 @@ def generate_faq_endpoint(
             status_code=500,
             detail="Failed to generate FAQs. Please try again later."
         )
-
-# --------------------------------------------------
-# FAQ History
-# --------------------------------------------------
-
-@app.get("/history")
-def history_endpoint():
-    return {
-        "history": get_faq_history()
-    }
