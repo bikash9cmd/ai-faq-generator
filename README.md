@@ -1,5 +1,7 @@
 # AI FAQ Generator
 
+> **Tech stack:** Python · FastAPI · React · Google Gemini (LLM)
+
 Generate clear, ready-to-publish FAQs from a topic, a block of pasted text or a webpage URL. A FastAPI backend calls Google Gemini with a structured JSON schema, and a React + Vite frontend lets you pick the number of questions, language and tone, regenerate any single FAQ and browse past results.
 
 ## Features
